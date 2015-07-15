@@ -1,0 +1,9 @@
+Building iBITS
+
+See doc/readme-qt.rst for instructions on building iBITS QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of iBITS.
+
+See doc/build-*.txt for instructions on building iBITSd,
+the intended-for-services, no-graphical-interface, reference
+implementation of iBITS.
