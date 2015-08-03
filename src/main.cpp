@@ -1543,6 +1543,10 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
             int64_t nTxValueOut = tx.GetValueOut();
             nValueIn += nTxValueIn;
             nValueOut += nTxValueOut;
+            
+            if (tx.IsCoinStake())
+                nStakeReward = nTxValueOut - nTxValueIn;
+            
             if (!tx.IsCoinStake())
                 nFees += nTxValueIn - nTxValueOut;
 
